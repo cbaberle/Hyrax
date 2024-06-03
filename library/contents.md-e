@@ -31,5 +31,5 @@ The following modules introduce the central concepts and methods behind Hyrax, a
 
 I studied both Computer Science and Philosophy for my undergraduate degree, and many of the fundamental questions that drive my research remain philosophical in nature. As such, the following modules serve to record my philosophical thoughts as they pertain to the central topics of Hyrax.
 
-* My [Research Manifesto](404.html) describes the aims, motivation, and methods of my research into the abstract structure of logic and computation. <pre class="Agda"><a id="1593" class="Keyword">open</a> <a id="1598" class="Keyword">import</a> <a id="1605" href="library.philosophy.research-manifesto.html" class="Module">library.philosophy.research-manifesto</a>
+* My [Research Manifesto](library/philosophy/research-manifesto.html) describes the aims, motivation, and methods of my research into the abstract structure of logic and computation. <pre class="Agda"><a id="1627" class="Keyword">open</a> <a id="1632" class="Keyword">import</a> <a id="1639" href="library.philosophy.research-manifesto.html" class="Module">library.philosophy.research-manifesto</a>
 </pre>
