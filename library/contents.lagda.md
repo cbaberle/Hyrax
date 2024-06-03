@@ -8,9 +8,9 @@ pagetitle: Contents | The Hyrax Project
 
 ### Jump to section:
 
-* [Introduction](#intro)
-* [Prelude](#prelude)
-* [Philosophy](#phil)
+* [Introduction](library/contents.html#intro)
+* [Prelude](library/contents.html#prelude)
+* [Philosophy](library/contents.html#phil)
 
 ![](img/decotwo2.png){width=24px class="bodyimg"}
 

@@ -6,7 +6,7 @@ pagetitle: Research Manifesto | C.B. Aberlé
 <nav class="contents">
 ### Jump to section:
 
-* [Title](#intro)
+* [Title](library/philosophy/research-manifesto.html#intro)
 
 ![](img/decotwo2.png){width=24px class="bodyimg"}
 </nav>
