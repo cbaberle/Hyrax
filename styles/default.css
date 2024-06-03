@@ -292,6 +292,10 @@ li > ol, li > ul {
         max-width: 240px;
         margin: 0 auto;
     }
+
+    .mainContents {
+        margin-top: 1em;
+    }
 }
 
 .contents ul {
