@@ -8,14 +8,16 @@ pagetitle: Research Manifesto | C.B. Aberlé
 
 * [Title](library/philosophy/research-manifesto.html#intro)
 
+
 ![](img/decotwo2.png){width=24px class="bodyimg"}
+
 </nav>
 
 > *"Modern logic, as I hope is now evident, has the effect of enlarging our abstract imagination, and providing an infinite number of possible hypotheses to be applied in the analysis of any complex fact. In this respect it is the exact opposite of the logic practised by the classical tradition. In that logic, hypotheses which seem primâ facie possible are professedly proved impossible, and it is decreed in advance that reality must have a certain special character. In modern logic, on the contrary, while the primâ facie hypotheses as a rule remain admissible, others, which only logic would have suggested, are added to our stock, and are very often found to be indispensable if a right analysis of the facts is to be obtained. The old logic put thought in fetters, while the new logic gives it wings."*
 >
 > – Bertrand Russell, ["Logic as the Essence of Philosophy"](https://ncatlab.org/nlab/show/Logic+as+the+Essence+of+Philosophy)
 
-<pre class="Agda"><a id="1217" class="Keyword">module</a> <a id="1224" href="library.philosophy.research-manifesto.html" class="Module">library.philosophy.research-manifesto</a> <a id="1262" class="Keyword">where</a>
+<pre class="Agda"><a id="1219" class="Keyword">module</a> <a id="1226" href="library.philosophy.research-manifesto.html" class="Module">library.philosophy.research-manifesto</a> <a id="1264" class="Keyword">where</a>
 </pre>
 In what follows, I will try to say something about the central motivations for my academic work, and outline my "research programme," insofar as I have such a thing. In brief, I am interested in developing what might be called *foundations of procedural epistemology*. The term *procedural epistemology* is here borrowed from Abelson & Sussman's [*Structure and Interpretation of Computer Programs*](https://mitpress.mit.edu/sites/default/files/sicp/index.html). In the preface to that book, the authors remark:
 
