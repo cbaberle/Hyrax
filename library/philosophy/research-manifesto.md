@@ -8,7 +8,6 @@ pagetitle: Research Manifesto | C.B. Aberlé
 
 * [Title](library/philosophy/research-manifesto.html#intro)
 
-
 ![](img/decotwo2.png){width=24px class="bodyimg"}
 
 </nav>
@@ -17,7 +16,7 @@ pagetitle: Research Manifesto | C.B. Aberlé
 >
 > – Bertrand Russell, ["Logic as the Essence of Philosophy"](https://ncatlab.org/nlab/show/Logic+as+the+Essence+of+Philosophy)
 
-<pre class="Agda"><a id="1219" class="Keyword">module</a> <a id="1226" href="library.philosophy.research-manifesto.html" class="Module">library.philosophy.research-manifesto</a> <a id="1264" class="Keyword">where</a>
+<pre class="Agda"><a id="1218" class="Keyword">module</a> <a id="1225" href="library.philosophy.research-manifesto.html" class="Module">library.philosophy.research-manifesto</a> <a id="1263" class="Keyword">where</a>
 </pre>
 In what follows, I will try to say something about the central motivations for my academic work, and outline my "research programme," insofar as I have such a thing. In brief, I am interested in developing what might be called *foundations of procedural epistemology*. The term *procedural epistemology* is here borrowed from Abelson & Sussman's [*Structure and Interpretation of Computer Programs*](https://mitpress.mit.edu/sites/default/files/sicp/index.html). In the preface to that book, the authors remark:
 
