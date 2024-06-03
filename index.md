@@ -1,38 +1,76 @@
 ---
-pagetitle: About | Hyrax Project
+pagetitle: About | The Hyrax Project
 ---
 
+<div class="frontmatter">
+
+<div class="title">
+
+<div class="titleblock">
+## <span class="dropcap">W</span>elcome to the Hyrax Project! {#intro}
+### An online resource and digital garden for categorical logic and type theory, formalized in Agda
+</div>
+
+</div>
+
+<div class="titlepicture">
 ![](img/hyrax8.png){width=240px class="bodyimg"}
+</div>
 
-<h2 style="text-align:center;"><span class="dropcap">W</span>elcome to the Hyrax Project!</h2>
-<h3 style="text-align:center; margin-left:1em; margin-right:1em;">An online resource and digital garden for categorical logic and type theory, formalized in Agda</h3>
+</div>
+
+<nav class="contents mainContents">
+
+### Jump to section
+
+* [Introduction](#intro)
+* [Related Projects](#related)
+* [About Me](#aboutme)
+
+![](img/decotwo2.png){width=24px class="bodyimg"}
+
+</nav>
 
 ---
 
-> *The [Hyrax](https://en.wikipedia.org/wiki/Hyrax) is the closest living land-dwelling relative of the [Elephant](https://global.oup.com/academic/product/sketches-of-an-elephant-9780198534259?cc=us&lang=en&). Despite its smaller stature, it shares with its larger cousins a high degree of intelligence and social behavior.*
+<blockquote class="sidequote"> 
+*The [Hyrax](https://en.wikipedia.org/wiki/Hyrax){class="external"} is the closest living terrestrial relative of the [Elephant](https://global.oup.com/academic/product/sketches-of-an-elephant-9780198534259?cc=us&lang=en&){class="external"}. Despite its smaller stature, it shares with its larger cousins a high degree of intelligence and social behavior.*
+</blockquote>
 
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Odio eu feugiat pretium nibh ipsum consequat nisl. Dui nunc mattis enim ut tellus elementum sagittis vitae. Semper feugiat nibh sed pulvinar proin gravida. Hendrerit dolor magna eget est lorem ipsum dolor. Mattis vulputate enim nulla aliquet porttitor lacus luctus accumsan. Commodo nulla facilisi nullam vehicula ipsum a arcu. Dictum sit amet justo donec enim diam vulputate ut pharetra. Venenatis a condimentum vitae sapien. Augue neque gravida in fermentum et sollicitudin. Adipiscing enim eu turpis egestas pretium. Massa massa ultricies mi quis hendrerit dolor magna. Non sodales neque sodales ut etiam sit amet nisl purus. Tempus egestas sed sed risus. Eget nullam non nisi est sit amet facilisis magna.
+The **Hyrax Project** is a personal wiki & [digital garden](https://maggieappleton.com/garden-history){class="external"} for the formal exploration of topics in and around categorical logic and type theory, with an emphasis on [synthetic mathematics](https://ncatlab.org/nlab/show/synthetic+mathematics){class="external"}, written by me, [C.B. Aberlé](https://cbaberle.com){class="external"}.
 
-Malesuada fames ac turpis egestas maecenas pharetra convallis posuere. Ultricies integer quis auctor elit sed vulputate mi sit. Tellus id interdum velit laoreet. Nibh mauris cursus mattis molestie a iaculis at. In est ante in nibh mauris cursus. Enim nulla aliquet porttitor lacus. Nulla aliquet porttitor lacus luctus accumsan tortor posuere ac ut. Vitae semper quis lectus nulla at volutpat. Justo laoreet sit amet cursus. Ut lectus arcu bibendum at varius vel pharetra vel turpis. Volutpat commodo sed egestas egestas fringilla phasellus faucibus. Semper risus in hendrerit gravida rutrum quisque.
+Aside from serving as my own personal repository of knowledge, Hyrax aims to be an approachable, comprehensive, and explorable resource for learning the topics it encompasses, in the mould of formalization projects such as the [1Lab](https://1lab.dev){class="external"}. To this end, Hyrax is also a literate [Agda](https://wiki.portal.chalmers.se/agda/pmwiki.php){class="external"} library consisting of both formally-verified code and explanatory prose.
 
-<pre class="Agda"><a id="2137" class="Keyword">module</a> <a id="2144" href="index.html" class="Module">index</a> <a id="2150" class="Keyword">where</a>
+<pre class="Agda"><a id="1869" class="Keyword">module</a> <a id="1876" href="index.html" class="Module">index</a> <a id="1882" class="Keyword">where</a>
 </pre>
-## The How
+However, Hyrax takes a distinct approach to formalization from many of its sister projects, in that it does not aim to use the type theoretic language of Agda to prove results *directly*, but rather uses this language to construct and compare *other* theories and languages in which these results may naturally be proved. In other words, instead of using Agda as a foundational system for mathematics, Hyrax uses Agda as [logical framework](https://en.wikipedia.org/wiki/Logical_framework){class="external"} for the invention and exploration of such foundational systems themselves.
 
-## The Why
+This kind of [metalinguistic abstraction](https://en.wikipedia.org/wiki/Metalinguistic_abstraction){class="external"} serves as a key principle of the philosophy of *synthetic mathematics,* for which Hyrax aims to serve as both exposition and proof-of-concept. For more on the philosophy of synthetic mathematics that underlies Hyrax, see the module [What is Synthetic Mathematics?](404.html):
 
-*Why formalize?*
+<pre class="Agda"><a id="2880" class="Comment">-- open import library.synthetic</a>
+</pre>
+For more on the underlying theory behind the use of logical frameworks in synthetic mathematics, and why Agda is especially well-suited to serve as such a logical framework, take a look at the module [The Algebraic Essence of Type Theory](404.html):
 
-*Why Agda and not some other proof assistant/theorem prover/programing language?*
+<pre class="Agda"><a id="3177" class="Comment">-- open import library.algebraicEssence</a>
+</pre>
+Finally, to get started exploring Hyrax, head on over to the [table of contents](library/contents.html):
 
-Quis auctor elit sed vulputate mi sit. Adipiscing commodo elit at imperdiet dui. Aliquet eget sit amet tellus cras adipiscing enim eu. Felis eget nunc lobortis mattis aliquam. Sit amet commodo nulla facilisi nullam vehicula. Congue nisi vitae suscipit tellus mauris a diam. Adipiscing diam donec adipiscing tristique risus nec feugiat in. Volutpat commodo sed egestas egestas fringilla. Cursus eget nunc scelerisque viverra. Sed lectus vestibulum mattis ullamcorper velit. Condimentum mattis pellentesque id nibh tortor id aliquet lectus. Orci porta non pulvinar neque laoreet suspendisse interdum consectetur libero. Urna neque viverra justo nec ultrices. Elit at imperdiet dui accumsan sit. Fames ac turpis egestas maecenas. Eleifend mi in nulla posuere. At erat pellentesque adipiscing commodo. In tellus integer feugiat scelerisque varius. Facilisi cras fermentum odio eu feugiat. Pellentesque habitant morbi tristique senectus et.
+<pre class="Agda"><a id="3336" class="Keyword">open</a> <a id="3341" class="Keyword">import</a> <a id="3348" href="library/contents.html" class="Module">library.contents</a>
+</pre>
+## Related Projects {#related}
 
-## About Me
+Although Hyrax aims to be relatively self-contained, ultimately it exists as part of a much larger network of online references and formalization projects in category theory and type theory, several of which directly inspired the conception of Hyrax:
+
+* [1Lab](https://1lab.dev){class="external"} – an experiment in discoverable formalisation of univalent mathematics in Cubical Agda.
+
+* [Clowder Project](https://clowderproject.com){class="external"} – an online reference work and wiki for category theory and mathematics.
+
+## About Me {#aboutme}
 
 ![](img/profile-picture4.jpg){width=180px class="bodyimg framed oval" style="float:left; margin-right: 1em;"}
 
-Tincidunt arcu non sodales neque sodales. Cum sociis natoque penatibus et magnis dis parturient montes. Fringilla phasellus faucibus scelerisque eleifend donec pretium. At varius vel pharetra vel. Montes nascetur ridiculus mus mauris vitae ultricies leo. Sed blandit libero volutpat sed. Risus at ultrices mi tempus imperdiet nulla. Felis eget velit aliquet sagittis id consectetur purus ut faucibus. Lacus viverra vitae congue eu consequat ac. Viverra suspendisse potenti nullam ac tortor. Sit amet massa vitae tortor condimentum. Urna condimentum mattis pellentesque id nibh. Senectus et netus et malesuada. Habitasse platea dictumst vestibulum rhoncus est pellentesque.
+I am a PhD student in Pure and Applied Logic at the Computer Science Department at Carnegie Mellon University. My research is focused on type theory, category theory, categorical logic, and applications thereof to programming languages and formal verification. For more about me, see [my personal website](https://cbaberle.com){class="external"}.
 
-Tincidunt ornare massa eget egestas purus viverra accumsan in nisl. Gravida arcu ac tortor dignissim convallis aenean et tortor at. Dictum varius duis at consectetur lorem donec. Nibh tellus molestie nunc non blandit. Pellentesque sit amet porttitor eget dolor morbi non arcu. Libero volutpat sed cras ornare arcu dui vivamus arcu. Vitae ultricies leo integer malesuada nunc vel risus commodo viverra. Nulla posuere sollicitudin aliquam ultrices sagittis. Non blandit massa enim nec dui nunc mattis enim ut. Nibh tortor id aliquet lectus. A cras semper auctor neque vitae tempus quam pellentesque.
+My path into academia has been unorthodox and at times complex. Having completed the equivalent of a high-school education by the age of 14, at that time I chose to devote myself to a career in music as a composer. In the course of pursuing my studies of music, however, I became increasingly interested in mathematics, logic, and computer science, and eventually became determined to study these topics at a research level. However, at that time (around 20 years of age) I had no qualifications in these areas, nor even a high school diploma, and it was primarily through access to online resources for learning these subjects that I was able to get where I am today. As such, I strive to ensure that my own academic work is freely available and easily accessible, as my own small way of giving back to a the community.

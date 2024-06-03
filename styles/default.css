@@ -10,8 +10,6 @@ html {
 }
 
 body {
-    background-color: #fafafa;
-  	color: #2b2d3a;
     margin: 0 auto;
     max-width: 100%;
     padding: 0;
@@ -25,22 +23,68 @@ body {
 #header {
     background-color: #16161b;
     color: #fafafa;
-    font-weight: 300;
-    padding: 0.6em;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (min-width: 900px) {
+    #header {
+        height: 100vh;
+        width: 150px;
+    }
+
+    #mainwrap {
+        margin-left: 150px;
+    }
+
+    #mainbody {
+        padding: 2em 0 1em 0;
+    }
+}
+
+@media (max-width: 899px) {
+    #header {
+        flex-flow: row;
+        width: 100%;
+        justify-content: center;
+        padding: 0.6em 0em 0.6em 0em;
+        position: static;
+    }
+
+    #mainmenu ul li {
+        display: inline-block;
+    }
+
+    #lambda {
+        display: none;
+    }
+
+    #mainbody {
+        padding: 1em 0 1em 0;
+    }
+}
+ 
+#mainwrap {
+    padding: 0 4vw 0 4vw;
+    background-color: #fafafa;
+    color: #2b2d3a;
+}
+
+@media (min-width: 1225px) {
+    #mainwrap {
+        margin-right: calc(300px + 2em + 2px);
+    }
 }
 
 #mainbody {
-    min-height: calc(100vh - 13.4em);
+    min-height: calc(100vh - 3em);
     max-width: 36em;
     margin: 0 auto;
-  	padding: 0em 2em 1em 2em;
-}
-
-#footer {
-    padding: 0.6em;
-    background-color: #16161b;
-    color: #fafafa;
-    text-align: center;
 }
 
 @media (max-width: 400px) {
@@ -75,14 +119,24 @@ p {
     margin: 1em 0;
 }
 
-#mainbody a:link, #mainbody a:visited {
-    color: #0057ae;
+#mainbody a:link {
+    color: #6196cc;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+#mainbody a:visited {
+    color: #6196cc;
     font-weight: 500;
     text-decoration: none;
 }
 
 #mainbody a:hover {
     text-decoration: underline;
+}
+
+#mainbody ul {
+    list-style-type: square;
 }
 
 img {
@@ -92,6 +146,7 @@ img {
 h1, h2, h3, h4, h5, h6 {
     font-family: 'spectral', serif;
     font-weight: 400;
+    text-align: center;
 }
 
 h1, h2 {
@@ -103,18 +158,9 @@ h1, h2 {
 }
 
 #logo {
-    font-family: 'Texturina', serif;
     font-size: 1.5em;
     margin: 0;
     font-weight: 300;
-    text-align: center;
-}
-
-#sublogo {
-    margin: 0;
-    /* font-family: 'texturina', serif; */
-    font-size: 1em;
-    font-style: italic;
     text-align: center;
 }
 
@@ -129,7 +175,7 @@ h1, h2 {
 }
 
 #mainbody h3 {
-    font-size: 1.5em;
+    font-size: 1.4em;
 }
 
 #mainbody h4 {
@@ -153,7 +199,6 @@ li > ol, li > ul {
 }
 
 #mainmenu ul li {
-    display: inline-block;
     padding: 0 0.6em;
 }
 
@@ -166,14 +211,121 @@ li > ol, li > ul {
     text-decoration: underline;
 }
 
+.frontmatter {
+    display: flex;
+    flex-flow: row wrap;
+    background-color: #16161b;
+    color: #fafafa;
+    border-radius: 15px;
+    border: 5px solid #16161b;
+}
+
+.title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 30%;
+}
+
+.title h3 {
+    margin-left: 0.6em;
+    margin-right: 0.6em;
+}
+
+.contents {
+    background-color: #ddd;
+  	color: #2b2d3a;
+    text-align: center;
+    display: flex;
+    flex-flow: column;
+    justify-content: top;
+    padding: 1em;
+}
+
+@media (min-width: 1225px) {
+    .contents {
+        position: fixed;
+        right: 0;
+        top: 0;
+        width: 300px;
+        height: 100%;
+        overflow-y: scroll;
+        border-left: 2px solid #2b2d3a;
+        padding-top: 2em;
+    }
+}
+
+@media (max-width: 1224px) {
+    .contents {
+        border-radius: 15px;
+        padding-left: 2em;
+        padding-right: 2em;
+        float: right;
+        margin-left: 1em;
+        margin-bottom: 0.5em;
+    }
+
+    .mainContents {
+        margin-top: 1em;
+    }
+
+    .unfoundContents {
+        float: none;
+        width: 24px;
+        margin: 0 auto;
+    }
+}
+
+.contents ul {
+    margin: 0.6em;
+    list-style-type: square;
+    list-style-position: inside;
+    padding-left: 0;
+}
+
+.contents ul li {
+    margin: 0.3em 0;
+    text-align: left;
+    padding: 5px 0.6em;
+}
+
+.contents a {
+    color: #2b2d3a !important;
+}
+
+.titlepicture {
+    background-color: #fafafa;
+  	color: #2b2d3a;
+    flex-basis: 240px;
+    border-radius: 15px;
+}
+
+@media (max-width: 900px) {
+    .title, .titlepicture {
+        flex: 100%;
+    }
+}
+
 blockquote {
     margin: 1em 1.7em 1em 1.7em;
     padding-left: 0;
     border-left: none;
     color: #606060;
 }
+
+@media (max-width: 1224px) {
+    .sidequote {
+        margin: 1em 0 1em 0;
+    }
+}
+
+@font-face {
+    font-family: 'mononoki';
+    src: url('https://github.com/madmalik/mononoki/blob/main/export/mononoki-Regular.ttf');
+}
+
 code {
-    font-family: 'fira code', Menlo, Monaco, 'Lucida Console', Consolas, monospace;
+    font-family: 'mononoki', monospace;
     font-size: 80%;
     font-weight: 300;
     margin: 0;
@@ -193,7 +345,7 @@ pre code {
 }
 
 hr {
-    background-color: #eee;
+    background-color: #ddd;
     border: none;
     height: 1px;
     margin: 1em 0;
@@ -241,7 +393,7 @@ div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 .display.math{display: block; text-align: center; margin: 0.5rem auto;}
 
-.bodyimg, .leafornament {
+.bodyimg {
     display: block;
     margin: 0 auto;
 }
@@ -255,22 +407,10 @@ ul.task-list{list-style: none;}
     border-radius: 50%;
 }
 
-.floatright {
+/* .floatright {
     float: right;
     margin-left: 1em;
-}
-
-#title-block-header {
-    display: none;
-}
-
-#blogroll {
-    text-align: center;
-}
-
-.blogsubtitle {
-    font-family: 'spectral', serif;
-}
+} */
 
 .footnotes {
     font-size: 85%;
@@ -288,31 +428,43 @@ ul.task-list{list-style: none;}
     /* line-height: 1; */
 }
 
+.Agda {
+    background-color: #16161b;
+    color: #fafafa;
+    border-top-left-radius: 0;
+    border-top-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 0;
+    border-left: 12px solid #6196cc;
+    padding: 1em;
+    font-family: 'mononoki', monospace;
+}
+
 /* Aspects. */
-.Agda .Comment       { color: #B22222 }
+.Agda .Comment       { color: #999 !important }
 .Agda .Background    {}
-.Agda .Markup        { color: #000000 }
-.Agda .Keyword       { color: #CD6600 }
-.Agda .String        { color: #B22222 }
-.Agda .Number        { color: #A020F0 }
-.Agda .Symbol        { color: #404040 }
-.Agda .PrimitiveType { color: #0000CD }
-.Agda .Pragma        { color: black   }
+.Agda .Markup        { color: #fafafa !important }
+.Agda .Keyword       { color: #cc99cd !important }
+.Agda .String        { color: #7ec699 !important }
+.Agda .Number        { color: #f08d49 !important }
+.Agda .Symbol        { color: #f8c555 !important }
+.Agda .PrimitiveType { color: #cc99cd !important }
+.Agda .Pragma        { color: #fafafa !important   }
 .Agda .Operator      {}
 .Agda .Hole          { background: #B4EEB4 }
 
 /* NameKinds. */
-.Agda .Bound                  { color: black   }
-.Agda .Generalizable          { color: black   }
-.Agda .InductiveConstructor   { color: #008B00 }
-.Agda .CoinductiveConstructor { color: #8B7500 }
-.Agda .Datatype               { color: #0000CD }
-.Agda .Field                  { color: #EE1289 }
-.Agda .Function               { color: #0000CD }
-.Agda .Module                 { color: #A020F0 }
-.Agda .Postulate              { color: #0000CD }
-.Agda .Primitive              { color: #0000CD }
-.Agda .Record                 { color: #0000CD }
+.Agda .Bound                  { color: #c7cdcc !important }
+.Agda .Generalizable          { color: #c7cdcc !important }
+.Agda .InductiveConstructor   { color: #c7cdcc !important }
+.Agda .CoinductiveConstructor { color: #c7cdcc !important }
+.Agda .Datatype               { color: #cc99cd !important }
+.Agda .Field                  { color: #c7cdcc !important }
+.Agda .Function               { color: #6196cc !important }
+.Agda .Module                 { color: #e2777a !important }
+.Agda .Postulate              { color: #6196cc !important }
+.Agda .Primitive              { color: #6196cc !important }
+.Agda .Record                 { color: #6196cc !important }
 
 /* OtherAspects. */
 .Agda .DottedPattern        {}
