@@ -68,6 +68,16 @@ body {
         padding: 1em 0 1em 0;
     }
 }
+
+@media (max-width: 560px) {
+    #header {
+        flex-flow: row wrap;
+    }
+
+    #logo {
+        flex: 100%;
+    }
+}
  
 #mainwrap {
     padding: 0 4vw 0 4vw;
@@ -272,6 +282,14 @@ li > ol, li > ul {
     .unfoundContents {
         float: none;
         width: 24px;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 560px) {
+    .contents {
+        float: none;
+        max-width: 240px;
         margin: 0 auto;
     }
 }
