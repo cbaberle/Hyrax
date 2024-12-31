@@ -454,6 +454,10 @@ ul.task-list{list-style: none;}
     /* line-height: 1; */
 }
 
+#title-block-header {
+    margin-bottom: 1em;
+}
+
 .Agda {
     background-color: #16161b;
     color: #fafafa;
