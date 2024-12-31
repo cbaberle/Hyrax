@@ -578,4 +578,4 @@ Any geometric theory is a quotient of the underlying simple theory given by its 
 If you have questions, comments, or are interested in contributing to the development of Synthetic Agda and/or synthetic mathematics using Synthetic Agda, please do get in touch! 
 
 * [Email](mailto:caberle@andrew.cmu.edu)
-* [Mathstodon](https://mathstodon.xyz/@cbaberle)
+* [Mathstodon.xyz](https://mathstodon.xyz/@cbaberle)

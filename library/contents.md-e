@@ -4,6 +4,11 @@ pagetitle: Contents | The Hyrax Project
 
 # Table of Contents {#intro}
 
+<pre class="Agda"><a id="88" class="Symbol">{-#</a> <a id="92" class="Keyword">OPTIONS</a> <a id="100" class="Pragma">--rewriting</a> <a id="112" class="Pragma">--cohesion</a> <a id="123" class="Pragma">--flat-split</a> <a id="136" class="Symbol">#-}</a>
+<a id="140" class="Keyword">module</a> <a id="147" href="library.contents.html" class="Module">library.contents</a> <a id="164" class="Keyword">where</a>
+</pre>
+## Prelude {#prelude}
+
 <nav class="contents">
 
 ### Jump to section:
@@ -15,11 +20,6 @@ pagetitle: Contents | The Hyrax Project
 ![](img/decotwo2.png){width=24px class="bodyimg"}
 
 </nav>
-
-<pre class="Agda"><a id="326" class="Symbol">{-#</a> <a id="330" class="Keyword">OPTIONS</a> <a id="338" class="Pragma">--rewriting</a> <a id="350" class="Pragma">--cohesion</a> <a id="361" class="Pragma">--flat-split</a> <a id="374" class="Symbol">#-}</a>
-<a id="378" class="Keyword">module</a> <a id="385" href="library.contents.html" class="Module">library.contents</a> <a id="402" class="Keyword">where</a>
-</pre>
-## Prelude {#prelude}
 
 The following modules introduce the central concepts and methods behind Hyrax, and are an excellent place to start exploring the rest of the library. 
 

@@ -87,7 +87,7 @@ body {
 
 @media (min-width: 1225px) {
     #mainwrap {
-        margin-right: calc(300px + 2em + 2px);
+        margin-right: calc(300px + 1.75em + 2px);
     }
 }
 
@@ -250,6 +250,7 @@ li > ol, li > ul {
     flex-flow: column;
     justify-content: top;
     padding: 1em;
+    font-size: 16px;
 }
 
 @media (min-width: 1225px) {
@@ -271,7 +272,7 @@ li > ol, li > ul {
         padding-left: 2em;
         padding-right: 2em;
         float: right;
-        width: 300px;
+        max-width: 300px;
         margin-left: 1em;
         margin-bottom: 0.5em;
     }

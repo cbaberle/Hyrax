@@ -4,6 +4,13 @@ pagetitle: Contents | The Hyrax Project
 
 # Table of Contents {#intro}
 
+```agda
+{-# OPTIONS --rewriting --cohesion --flat-split #-}
+module library.contents where
+```
+
+## Prelude {#prelude}
+
 <nav class="contents">
 
 ### Jump to section:
@@ -15,13 +22,6 @@ pagetitle: Contents | The Hyrax Project
 ![](img/decotwo2.png){width=24px class="bodyimg"}
 
 </nav>
-
-```agda
-{-# OPTIONS --rewriting --cohesion --flat-split #-}
-module library.contents where
-```
-
-## Prelude {#prelude}
 
 The following modules introduce the central concepts and methods behind Hyrax, and are an excellent place to start exploring the rest of the library. 
 
