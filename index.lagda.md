@@ -39,11 +39,12 @@ pagetitle: About | The Hyrax Project
 
 ---
 
-The **Hyrax Project** is a personal wiki & [digital garden](https://maggieappleton.com/garden-history){class="external"} for the formal exploration of topics in and around categorical logic and type theory, with an emphasis on [synthetic mathematics](https://ncatlab.org/nlab/show/synthetic+mathematics){class="external"}, written by me, [C.B. Aberlé](https://cbaberle.com){class="external"}.
+The **Hyrax Project** is a personal wiki & [digital garden](https://maggieappleton.com/garden-history){class="external"} for the formal exploration of topics in and around categorical logic and type theory, with an emphasis on [synthetic mathematics](https://ncatlab.org/nlab/show/synthetic+mathematics){class="external"}, written by me, [Corinthia Beatrix Aberlé](https://cbaberle.com){class="external"}.
 
 Aside from serving as my own personal repository of knowledge, Hyrax aims to be an approachable, comprehensive, and explorable resource for learning the topics it encompasses, in the mould of formalization projects such as the [1Lab](https://1lab.dev){class="external"}. To this end, Hyrax is also a literate [Agda](https://wiki.portal.chalmers.se/agda/pmwiki.php){class="external"} library consisting of both formally-verified code and explanatory prose.
 
 ```agda
+{-# OPTIONS --rewriting --cohesion --flat-split #-}
 module index where
 ```
 
@@ -52,13 +53,13 @@ However, Hyrax takes a distinct approach to formalization from many of its siste
 This kind of [metalinguistic abstraction](https://en.wikipedia.org/wiki/Metalinguistic_abstraction){class="external"} serves as a key principle of the philosophy of *synthetic mathematics,* for which Hyrax aims to serve as both exposition and proof-of-concept. For more on the philosophy of synthetic mathematics that underlies Hyrax, see the module [What is Synthetic Mathematics?](404.html):
 
 ```agda
--- open import library.synthetic
+-- open import library.synthetic-math
 ```
 
-For more on the underlying theory behind the use of logical frameworks in synthetic mathematics, and why Agda is especially well-suited to serve as such a logical framework, take a look at the module [The Algebraic Essence of Type Theory](404.html):
+For more on the axiomatic framework underlying Hyrax, and its implementation in Agda, take a look at the module [Introduction to Synthetic Agda](library/synthetic-agda.html):
 
 ```agda
--- open import library.algebraicEssence
+open import library.synthetic-agda
 ```
 
 Finally, to get started exploring Hyrax, head on over to the [table of contents](library/contents.html):

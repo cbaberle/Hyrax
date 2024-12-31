@@ -82,7 +82,8 @@ class="external">digital garden</a> for the formal exploration of topics
 in and around categorical logic and type theory, with an emphasis on <a
 href="https://ncatlab.org/nlab/show/synthetic+mathematics"
 class="external">synthetic mathematics</a>, written by me, <a
-href="https://cbaberle.com" class="external">C.B. Aberlé</a>.</p>
+href="https://cbaberle.com" class="external">Corinthia Beatrix
+Aberlé</a>.</p>
 <p>Aside from serving as my own personal repository of knowledge, Hyrax
 aims to be an approachable, comprehensive, and explorable resource for
 learning the topics it encompasses, in the mould of formalization
@@ -91,7 +92,8 @@ class="external">1Lab</a>. To this end, Hyrax is also a literate <a
 href="https://wiki.portal.chalmers.se/agda/pmwiki.php"
 class="external">Agda</a> library consisting of both formally-verified
 code and explanatory prose.</p>
-<pre class="Agda"><a id="1869" class="Keyword">module</a> <a id="1876" href="index.html" class="Module">index</a> <a id="1882" class="Keyword">where</a>
+<pre class="Agda"><a id="1882" class="Symbol">{-#</a> <a id="1886" class="Keyword">OPTIONS</a> <a id="1894" class="Pragma">--rewriting</a> <a id="1906" class="Pragma">--cohesion</a> <a id="1917" class="Pragma">--flat-split</a> <a id="1930" class="Symbol">#-}</a>
+<a id="1934" class="Keyword">module</a> <a id="1941" href="index.html" class="Module">index</a> <a id="1947" class="Keyword">where</a>
 </pre>
 <p>However, Hyrax takes a distinct approach to formalization from many
 of its sister projects, in that it does not aim to use the type
@@ -110,17 +112,17 @@ principle of the philosophy of <em>synthetic mathematics,</em> for which
 Hyrax aims to serve as both exposition and proof-of-concept. For more on
 the philosophy of synthetic mathematics that underlies Hyrax, see the
 module <a href="404.html">What is Synthetic Mathematics?</a>:</p>
-<pre class="Agda"><a id="2880" class="Comment">-- open import library.synthetic</a>
+<pre class="Agda"><a id="2945" class="Comment">-- open import library.synthetic-math</a>
 </pre>
-<p>For more on the underlying theory behind the use of logical
-frameworks in synthetic mathematics, and why Agda is especially
-well-suited to serve as such a logical framework, take a look at the
-module <a href="404.html">The Algebraic Essence of Type Theory</a>:</p>
-<pre class="Agda"><a id="3177" class="Comment">-- open import library.algebraicEssence</a>
+<p>For more on the axiomatic framework underlying Hyrax, and its
+implementation in Agda, take a look at the module <a
+href="library/synthetic-agda.html">Introduction to Synthetic
+Agda</a>:</p>
+<pre class="Agda"><a id="3172" class="Keyword">open</a> <a id="3177" class="Keyword">import</a> <a id="3184" href="library/synthetic-agda.html" class="Module">library.synthetic-agda</a>
 </pre>
 <p>Finally, to get started exploring Hyrax, head on over to the <a
 href="library/contents.html">table of contents</a>:</p>
-<pre class="Agda"><a id="3336" class="Keyword">open</a> <a id="3341" class="Keyword">import</a> <a id="3348" href="library/contents.html" class="Module">library.contents</a>
+<pre class="Agda"><a id="3326" class="Keyword">open</a> <a id="3331" class="Keyword">import</a> <a id="3338" href="library/contents.html" class="Module">library.contents</a>
 </pre>
 <h2 id="related">Related Projects</h2>
 <p>Although Hyrax aims to be relatively self-contained, ultimately it

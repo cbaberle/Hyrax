@@ -271,6 +271,7 @@ li > ol, li > ul {
         padding-left: 2em;
         padding-right: 2em;
         float: right;
+        width: 300px;
         margin-left: 1em;
         margin-bottom: 0.5em;
     }
@@ -463,6 +464,7 @@ ul.task-list{list-style: none;}
     border-left: 12px solid #6196cc;
     padding: 1em;
     font-family: 'mononoki', monospace;
+    font-size: 15px;
 }
 
 /* Aspects. */

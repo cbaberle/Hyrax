@@ -39,25 +39,26 @@ pagetitle: About | The Hyrax Project
 
 ---
 
-The **Hyrax Project** is a personal wiki & [digital garden](https://maggieappleton.com/garden-history){class="external"} for the formal exploration of topics in and around categorical logic and type theory, with an emphasis on [synthetic mathematics](https://ncatlab.org/nlab/show/synthetic+mathematics){class="external"}, written by me, [C.B. Aberlé](https://cbaberle.com){class="external"}.
+The **Hyrax Project** is a personal wiki & [digital garden](https://maggieappleton.com/garden-history){class="external"} for the formal exploration of topics in and around categorical logic and type theory, with an emphasis on [synthetic mathematics](https://ncatlab.org/nlab/show/synthetic+mathematics){class="external"}, written by me, [Corinthia Beatrix Aberlé](https://cbaberle.com){class="external"}.
 
 Aside from serving as my own personal repository of knowledge, Hyrax aims to be an approachable, comprehensive, and explorable resource for learning the topics it encompasses, in the mould of formalization projects such as the [1Lab](https://1lab.dev){class="external"}. To this end, Hyrax is also a literate [Agda](https://wiki.portal.chalmers.se/agda/pmwiki.php){class="external"} library consisting of both formally-verified code and explanatory prose.
 
-<pre class="Agda"><a id="1869" class="Keyword">module</a> <a id="1876" href="index.html" class="Module">index</a> <a id="1882" class="Keyword">where</a>
+<pre class="Agda"><a id="1882" class="Symbol">{-#</a> <a id="1886" class="Keyword">OPTIONS</a> <a id="1894" class="Pragma">--rewriting</a> <a id="1906" class="Pragma">--cohesion</a> <a id="1917" class="Pragma">--flat-split</a> <a id="1930" class="Symbol">#-}</a>
+<a id="1934" class="Keyword">module</a> <a id="1941" href="index.html" class="Module">index</a> <a id="1947" class="Keyword">where</a>
 </pre>
 However, Hyrax takes a distinct approach to formalization from many of its sister projects, in that it does not aim to use the type theoretic language of Agda to prove results *directly*, but rather uses this language to construct and compare *other* theories and languages in which these results may naturally be proved. In other words, instead of using Agda as a foundational system for mathematics, Hyrax uses Agda as [logical framework](https://en.wikipedia.org/wiki/Logical_framework){class="external"} for the invention and exploration of such foundational systems themselves.
 
 This kind of [metalinguistic abstraction](https://en.wikipedia.org/wiki/Metalinguistic_abstraction){class="external"} serves as a key principle of the philosophy of *synthetic mathematics,* for which Hyrax aims to serve as both exposition and proof-of-concept. For more on the philosophy of synthetic mathematics that underlies Hyrax, see the module [What is Synthetic Mathematics?](404.html):
 
-<pre class="Agda"><a id="2880" class="Comment">-- open import library.synthetic</a>
+<pre class="Agda"><a id="2945" class="Comment">-- open import library.synthetic-math</a>
 </pre>
-For more on the underlying theory behind the use of logical frameworks in synthetic mathematics, and why Agda is especially well-suited to serve as such a logical framework, take a look at the module [The Algebraic Essence of Type Theory](404.html):
+For more on the axiomatic framework underlying Hyrax, and its implementation in Agda, take a look at the module [Introduction to Synthetic Agda](library/synthetic-agda.html):
 
-<pre class="Agda"><a id="3177" class="Comment">-- open import library.algebraicEssence</a>
+<pre class="Agda"><a id="3172" class="Keyword">open</a> <a id="3177" class="Keyword">import</a> <a id="3184" href="library/synthetic-agda.html" class="Module">library.synthetic-agda</a>
 </pre>
 Finally, to get started exploring Hyrax, head on over to the [table of contents](library/contents.html):
 
-<pre class="Agda"><a id="3336" class="Keyword">open</a> <a id="3341" class="Keyword">import</a> <a id="3348" href="library/contents.html" class="Module">library.contents</a>
+<pre class="Agda"><a id="3326" class="Keyword">open</a> <a id="3331" class="Keyword">import</a> <a id="3338" href="library/contents.html" class="Module">library.contents</a>
 </pre>
 ## Related Projects {#related}
 
