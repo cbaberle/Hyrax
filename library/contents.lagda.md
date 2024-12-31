@@ -23,7 +23,7 @@ module library.contents where
 
 ## Prelude {#prelude}
 
-The following modules introduce the central concepts and methods behind Hyrax, and are an excellent place to start exploring the rest of the library.
+The following modules introduce the central concepts and methods behind Hyrax, and are an excellent place to start exploring the rest of the library. 
 
 * [What is Synthetic Mathematics?](404.html) Introduces the concepts of analytic and synthetic methods in mathematics, and argues for the need to develop tools for the latter: ```agda
 -- open import library.synthetic

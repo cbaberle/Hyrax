@@ -500,7 +500,7 @@ module paramId (@♭ J : Sort {ℓ = lzero} emp (λ _ → ⊤))
 
 This proof straightforwardly generalizes to arbitrary arities of parametricity by replacing `J` in the above with a `K`-pointed atomic sort.
 
-Moreover, this form of parametricity extends (at least) to the types of impredicative encodings of inductive types and indeed *higher* inductive types. As an example, we demonstrate this for the cases of the impredicative encodings of the natural numbers and the circle, respectively:
+Moreover, this form of parametricity extends (at least) to the types of impredicative encodings of inductive types and indeed *higher* inductive types. As an example, we demonstrate this for the cases of the impredicative encodings of the natural numbers and the circle, respectively: 
 
 ```agda
 -- parametricity for impredicative encoding of 

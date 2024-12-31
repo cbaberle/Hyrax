@@ -10,6 +10,7 @@ all: $(TAR)
 	mv html/library.$(word 2, $^) $(word 2, $^)
 	rm -rf html
 	sed -i -e 's#href="library.philosophy.#href="library/philosophy/#g' $(word 2, $^)
+	sed -i -e 's#href="library.#href="library/#g' $(word 2, $^)
 	pandoc $(word 2, $^) -s --mathjax -o $@ -c ../styles/default.css -B ../elements/header.html -A ../elements/footer.html
 
 clean:
