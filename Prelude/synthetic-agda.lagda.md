@@ -1,65 +1,39 @@
 ---
 pagetitle: Introduction to Synthetic Agda | The Hyrax Project
 title: Introduction to Synthetic Agda
+author: Corinthia Beatrix Aberlé
 ---
+# Introduction to Synthetic Agda
 
-<div class="author">
-![](img/profile-picture4.jpg){width=90px class="bodyimg framed oval" style="margin: 0 auto;"}
-<h3>Corinthia Beatrix Aberlé</h3>
-</div>
+## What is Synthetic Agda? 
 
----
-
-# Introduction {#intro}
-
-## What is Synthetic Agda? {#what-is}
-
-<nav class="contents">
-
-### Jump to section:
-
-* [Introduction](library/synthetic-agda.html#intro)
-    * [What is Synthetic Agda?](library/synthetic-agda.html#what-is)
-* [The Atoms of Synthetic Mathematics](library/synthetic-agda.html#atoms)
-    * [Type Theory](library/synthetic-agda.html#type-theory)
-    * [Theories & Signatures](library/synthetic-agda.html#sig)
-    * [Bridge Types & Discrete Types](library/synthetic-agda.html#bridge)
-    * [The ♭ and ♭♭ Modalities](library/synthetic-agda.html#flat)
-    * [Amazing Right Adjoints & Parametricity](library/synthetic-agda.html#amazing)
-    * [Instances of Impredicativity](library/synthetic-agda.html#impred)
-* [Conclusion – Toward the Type Theory of Topoi](library/synthetic-agda.html#conclusion)
-
-![](img/decotwo2.png){width=24px class="bodyimg"}
-
-</nav>
-
-Synthetic Agda is an extension of the Agda programming language and proof assistant to support advanced forms of [synthetic mathematics](https://golem.ph.utexas.edu/category/2015/02/introduction_to_synthetic_math.html). For this purpose, we extend Agda with various constructions that allow it to be customized to reflect the internal language of any [Grothendieck topos](https://ncatlab.org/nlab/show/Grothendieck+topos) (or, more generally, any [Grothendieck ∞-topos](https://ncatlab.org/nlab/show/(infinity,1)-topos)), and moreover for a broad class of type-theoretic constructions (including inductive types, higher inductive types, coinductive types, adjoint functors, etc.) to be studied in this setting. This is accomplished by extending Agda with various axioms, all of which are given computational rules via Agda's term rewriting system. Perhaps surprisingly, this all can be done by enabling some of Agda's modal features (namely the `--cohesion` and `--flat-split` flags) and then using Agda's mechanisms of postulates and rewrite rules to assert the relevant axioms and their computational rules. As such, Synthetic Agda can be (and has been) implemented as an Agda module, such that making use of Synthetic Agda's features requires merely importing this module. In fact, this document *is* that module, written as literate Agda that also serves as a guide to the features and basic definitions of Synthetic Agda, explaining each in turn as it is introduced.
+Synthetic Agda is an extension of the Agda programming language and proof assistant to support advanced forms of [[Synthetic Mathematics]]. For this purpose, we extend Agda with various constructions that allow it to be customized to reflect the internal language of any [Grothendieck topos](https://ncatlab.org/nlab/show/Grothendieck+topos) (or, more generally, any [Grothendieck ∞-topos](https://ncatlab.org/nlab/show/(infinity,1)-topos)), and moreover for a broad class of type-theoretic constructions (including inductive types, higher inductive types, coinductive types, adjoint functors, etc.) to be studied in this setting. This is accomplished by extending Agda with various axioms, all of which are given computational rules via Agda's term rewriting system. Perhaps surprisingly, this all can be done by enabling some of Agda's modal features (namely the `--cohesion` and `--flat-split` flags) and then using Agda's mechanisms of postulates and rewrite rules to assert the relevant axioms and their computational rules. As such, Synthetic Agda can be (and has been) implemented as an Agda module, such that making use of Synthetic Agda's features requires merely importing this module. In fact, this document *is* that module, written as literate Agda that also serves as a guide to the features and basic definitions of Synthetic Agda, explaining each in turn as it is introduced.
 
 ```agda
 {-# OPTIONS --rewriting --cohesion --flat-split 
             --without-K --cubical-compatible #-}
-module library.synthetic-agda where
+module Prelude.synthetic-agda where
 ```
 
 ---
 
-# The Atoms of Synthetic Mathematics {#atoms}
+# The Atoms of Synthetic Mathematics
 
-## Type Theory {#type-theory}
+## Type Theory
 
-The base type theory of Synthetic Agda is essentially that of vanilla Agda -- i.e. a form of Martin-Löf Type Theory -- extended with an *interval* and *path types* similar to those of Cubical Type Theory and Cubical Agda, along with the basic modal features supported by Agda's `--cohesion` and `--flat-split` flags. In addition to the interval/path types, we also make use of some definitions from [Homotopy Type Theory](https://homotopytypetheory.org/book/) (although we do not assume univalence), which are specified in the `hott` module.
+The base type theory of Synthetic Agda is essentially that of vanilla Agda -- i.e. a form of Martin-Löf Type Theory -- extended with an *interval* and *path types* similar to those of Cubical Type Theory and Cubical Agda, along with the basic modal features supported by Agda's `--cohesion` and `--flat-split` flags. In addition to the interval/path types, we also make use of some definitions from [Homotopy Type Theory](https://homotopytypetheory.org/book/) (although we do not assume univalence), which are specified in the [[hott.lagda]] module.
 
 ```agda
 open import Agda.Primitive
 open import Agda.Builtin.Equality
 open import Agda.Builtin.Equality.Rewrite
 open import Agda.Builtin.Sigma
-open import library.hott
+open import Prelude.hott
 ```
 
 ---
 
-## Theories & Signatures {#sig}
+## Theories & Signatures
 
 One of the key aims of Synthetic Agda is to provide a type-theoretic setting for working in the internal language of any Grothendieck (∞-)topos. However, since arbitrary Grothendieck (∞-)topoi may be quite complex, we build this synthetic setting up in stages, first identifying a subset of "simple" topoi whose internal languages are relatively easy to axiomatize, and then showing how the internal languages of all other Grothendieck topoi can be obtained as certain subuniverses definable within the internal languages of these *simple* topoi.
 
@@ -124,7 +98,7 @@ El♭ (Γ ,,[ A ] J) = Σ (El♭ Γ) A
 
 ---
 
-## Bridge Types & Discrete Types {#bridge}
+## Bridge Types & Discrete Types
 
 We define a *closed* atomic sort as a type of the form `El J (↓ x)` for some atomic sort `J : Sort Γ A` and `x : El♭ Γ`. Intuitively, a closed atomic sort of this form represents a type with the same *points* as `A x`, but that may carry additional *cohesive* or *infinitesimal* structure around these points. Given a function `b : A x → B` specifying a family of points (the *boundary*) `b a : B` for each `a : A x`, a function `f : El J (↓ x) → B` such that `f ∘ (𝐣 J x) = b` witnesses that this family of points is bound together by the same sort of cohesive/infinitesimal structure as the points of `El J (↓ x)`. We define *bridge types*  as the types of such functions:
 
@@ -204,7 +178,7 @@ is-disc {A = A} J x B =
 
 ---
 
-## The ♭ and ♭♭ Modalities {#flat}
+## The ♭ and ♭♭ Modalities
 
 Using Agda's modal features, we may define the ♭ modality on types as follows
 
@@ -362,7 +336,7 @@ postulate
 
 ---
 
-## Amazing Right Adjoints & Parametricity {#amazing}
+## Amazing Right Adjoints & Parametricity
 
 We postulate one final characteristic property of the classifying topoi of "simple" geometric theories, as we have defined them, that serves to make the closed atomic sorts truly [atomic](https://ncatlab.org/nlab/show/tiny+object), as follows: for each closed atomic sort `El J (↓ x)`, the operation on type families `El J (↓ x) → Set` given by formation of bridge types has an [amazing right adjoint](https://ncatlab.org/nlab/show/amazing+right+adjoint). This axiom is justified by the fact that the classifying topos of every simple geometric theory is, in particular, a *presheaf topos* on a category with all finite limits, which is enough to imply that every representable presheaf (which, in our case, correspond precisely to the closed atomic sorts) gives rise to such an amazing right adjoint.
 
@@ -545,7 +519,7 @@ module paramS1
 
 ---
 
-## Instances of Impredicativity {#impred}
+## Instances of Impredicativity
 
 The fact that Synthetic Agda is capable of proving such parametricity theorems as above *internally* makes it an ideal playground for experimenting with [impredicative encodings](https://arxiv.org/abs/1802.02820) of constructs defined by universal properties, such inductive types, higher inductive types, coinductive types, adjoint functors, etc. Unrestricted impredicativity, however, would be a very strong assumption (e.g. it is anti-classical), so we do not make this assumption directly. Instead, we let the user postulate their own *instances of impredicativity*, by way of axioms that create isomorphic instances of types in universes at lower levels than would normally exist under Agda's predicative hierarchy of universes.
 
@@ -603,7 +577,7 @@ postulate
 
 ---
 
-# Conclusion – Toward the Type Theory of Topoi {#conclusion}
+# Conclusion – Toward the Type Theory of Topoi
 
 The above constitutes the main axiomatic and computational framework of Synthetic Agda. As it stands, this framework is very much a work-in-progress, and it is altogether certain that these axioms will be subject to continued reformulations, modifications, and extensions as experience working with this framework demonstrates its shortcomings or unrealized possibilities. In this spirit, we conclude with a brief assessment of the prospects for Synthetic Agda and its continued development.
 

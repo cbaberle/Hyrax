@@ -1,12 +1,6 @@
-<nav class="contents">
-
-![](img/decotwo2.png){width=24px class="bodyimg"}
-
-</nav> 
-
 ```agda
 {-# OPTIONS --without-K --rewriting --cubical-compatible #-}
-module library.hott where
+module Prelude.hott where
 
 open import Agda.Primitive
 open import Agda.Builtin.Equality
